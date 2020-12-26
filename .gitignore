@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+# to be ignore
+*.classpath
+*.project
+*.settings
+mvnw
+mvnw.cmd
+.mvn/
+
 # Log file
 *.log
 
