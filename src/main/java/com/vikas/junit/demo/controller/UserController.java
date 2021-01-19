@@ -27,4 +27,24 @@ public class UserController {
 		user.setName("Vikas");
 		return userService.saveUser(user);
 	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/addNewUser")
+	public String addNewUser(User user){		
+		User savedUser = userService.saveUser(user);
+		if(savedUser.getName() != null) {
+			return "success";
+		}else {
+			return "failure";
+		}
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/addUser")
+	public String addUser(User user){		
+		User savedUser = userService.saveUser(user);
+		if(savedUser.getName() != null) {
+			return "success";
+		}else {
+			return "failure";
+		}
+	}
 }
